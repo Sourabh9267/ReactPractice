@@ -1,0 +1,1 @@
+### Practicing React JS from scratch using basics functionalities, including basic mini hands-projects 
