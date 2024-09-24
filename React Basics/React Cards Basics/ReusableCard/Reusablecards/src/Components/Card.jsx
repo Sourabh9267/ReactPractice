@@ -31,11 +31,11 @@ function Card() {
     ];
 
     return (
-        <div className='CardDiv h-screen w-full bg-zinc-200 flex items-center justify-center'>
+        <>
 
 
             {data.map((elem, index) => (
-                <div key={index} className="div p-4 bg-red-300" >
+                <div key={index} className="div p-4" >
 
                     <div className="card h-fit w-fit bg-white rounded-md">
 
@@ -60,7 +60,8 @@ function Card() {
 
                 </div>
             ))}
-        </div>
+    </>
+    
     );
 }
 
