@@ -15,7 +15,7 @@ function CardSlider() {
                 })
             )}>
 
-            <IoIosArrowRoundForward  size={'4em'} />
+            <IoIosArrowRoundForward  size={'4em'} className={`${val ? 'rotate-180':'rotate-0'} transition-transform delay-200`}/>
 
             </button>
             <img className={`overflow-hidden absolute z-0 transition-transform delay-200 ${val ? 'translate-x-[0%]' : 'translate-x-[100%]'}`} src="https://images.unsplash.com/photo-1547405602-cdafbb1d8a44?q=80&w=1700&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
