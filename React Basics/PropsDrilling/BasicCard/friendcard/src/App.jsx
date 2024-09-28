@@ -1,4 +1,4 @@
- import React from 'react'
+ import React, { useState } from 'react'
  import CardFriend from './Componants/CardFriend'
 function App() {
 
@@ -30,6 +30,18 @@ function App() {
 
   ]
 
+  const [data,setData]=useState(usrdata);
+
+  const handleFriends= () => {
+
+    setData((prev)=>{
+     return prev.map((item,index)=>{
+        if(index === 2){
+          return {...item, isFriend: !item.isFriend}
+        }
+      })
+    })
+  }
 
   return (
     <div className='bg-zinc-200 h-screen w-full flex items-center justify-center gap-4'>

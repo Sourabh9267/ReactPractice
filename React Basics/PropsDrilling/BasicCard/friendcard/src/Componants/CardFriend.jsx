@@ -22,8 +22,8 @@ function CardFriend(props) {
 
         <div className="btn h-12 w-full flex items-center justify-center">
 
-            <button className='bg-blue-500 h-8 w-40 rounded-full text-sm font-bold text-white' onClick={()=>handleFriends} >
-                Add Friend
+            <button className='bg-blue-500 h-8 w-40 rounded-full text-sm font-bold text-white' onClick={handleFriends} >
+               { isFriend ? "Added as friend" : "Add Friend"}
             </button>
 
         </div>
