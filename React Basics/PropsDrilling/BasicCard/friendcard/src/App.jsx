@@ -32,23 +32,29 @@ function App() {
 
   const [data,setData]=useState(usrdata);
 
-  const handleFriends= () => {
+  const handleFriends= (index)=>{
+    console.log("Function Chal Gaya");
+    
+    setData((prevData)=>{
 
-    setData((prev)=>{
-     return prev.map((item,index)=>{
-        if(index === 2){
+      return  prevData.map((item,idx)=>{
+        if(idx===index){
           return {...item, isFriend: !item.isFriend}
         }
+
+        return item;
       })
+
     })
+
   }
 
   return (
-    <div className='bg-zinc-200 h-screen w-full flex items-center justify-center gap-4'>
+    <div className='bg-zinc-300 h-screen w-full flex items-center justify-center gap-4'>
 
       {
-        usrdata.map((elem,index)=>(
-          <CardFriend userphoto={elem.img} username={elem.name} bio={elem.desc}   />
+        data.map((elem,index)=>(
+          <CardFriend userphoto={elem.img} username={elem.name} bio={elem.desc} friends={elem.isFriend}  key={index}  btnfx={()=>handleFriends(index)} />
         ))
 
       }

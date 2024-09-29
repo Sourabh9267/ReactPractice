@@ -1,11 +1,13 @@
 import React from 'react'
+import { TbFriends } from "react-icons/tb";
+import { TbFriendsOff } from "react-icons/tb";
 
 function CardFriend(props) {
 
 
 
   return (
-    <div className='h-80 w-56 bg-zinc-300 rounded-md overflow-hidden font-[poppins]'>
+    <div className='h-80 w-56 bg-zinc-100 rounded-md overflow-hidden font-[poppins] drop-shadow-md'>
 
         <div className="imgdiv h-36 w-full bg-zinc-500  ">
 
@@ -22,8 +24,12 @@ function CardFriend(props) {
 
         <div className="btn h-12 w-full flex items-center justify-center">
 
-            <button className='bg-blue-500 h-8 w-40 rounded-full text-sm font-bold text-white' onClick={handleFriends} >
-               { isFriend ? "Added as friend" : "Add Friend"}
+
+
+            <button  className={`${props.friends ? 'bg-green-400':'bg-blue-400 '}  transition-transform delay-1000 h-8 w-40 rounded-full text-sm font-bold text-white flex items-center justify-center gap-2 `} onClick={props.btnfx}  >
+
+              {props.friends ? <TbFriends />:<TbFriendsOff />}     
+              {props.friends ? " Friends" : "Add as Friend"}
             </button>
 
         </div>
