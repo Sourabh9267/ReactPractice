@@ -24,15 +24,33 @@ function App() {
     const [newData,setnewData]=useState(prodData);
 
 
+    const sendData=[{
+        id:300,
+        title: "My Product",
+        price: 100,
+        description: "This is a sample product",
+        category: "Electronics",
+        image: "https://picsum.photos/id/237/200/300"
+    }]
 
-
+    const handleSendAPI=()=>{
+        console.log("SEND API FUNCTION STARTED");
+        axios.post("https://fakestoreapi.com/products",sendData).then((res)=>{
+            console.log("API CALL SUCCESSFUL", res);
+            
+        }).catch((err)=>{
+            console.log(err.message);
+            
+        })
+    }
 
   return (
     <div className='bg-zinc-300 h-screen w-full  '>
 
-        <div className="btn h-12 w-full flex items-center justify-center">
+        <div className="btn gap-5 h-12 w-full flex items-center justify-center">
 
         <Button bg="bg-green-200" text="Call Api" onClickfx={handleGetAPI}></Button>
+        <Button bg="bg-orange-200" text="Send Data to API" onClickfx={handleSendAPI}></Button>
         </div>
         
           <div className="cards h-fit w-full flex  flex-wrap items-start justify-start bg-zinc-200 px-3 gap-2 font-[poppins]">

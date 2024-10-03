@@ -23,7 +23,7 @@ function Card({category,productname,desc,price,img}) {
     <div className='card h-fit w-fit flex rounded-md overflow-hidden drop-shadow-md transition-transform duration-200'>
 
         <div className='h-96 w-64  overflow-hidden transition-transform duration-200'>
-            <div className="overlay h-full w-1/2 overflow-hidden bg-zinc-800 opacity-80 hover:opacity-0  absolute transition-transform duration-700"></div>
+            <div className="overlay h-full w-1/2 overflow-hidden bg-zinc-800 opacity-30 hover:opacity-0  absolute transition-transform duration-700"></div>
             <img src={img} alt="" className=' h-full w-full rounded-md object-cover'/>
         </div>
         
