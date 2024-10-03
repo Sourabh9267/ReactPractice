@@ -1,0 +1,89 @@
+
+.keyboard {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textcontainer {
+  width: 60vw;
+  height: 25vh ;
+  overflow: auto;
+  color:white;
+  font-size: 4vh;
+  padding: 2vw;
+  border: 2px solid gray;
+}
+
+
+.keyboardcontainer {
+  width: fit-content;
+  padding: 2vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.container {
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  background: #5a5a5a;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.key {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #020202;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color ease-in-out 0.15s;
+}
+
+.key:hover{
+  background-color: rgb(124, 221, 213);
+  
+}
+
+.row:first-child .key:first-child{
+  width: 40px;
+}
+
+.row:first-child .key:last-child{
+  width: 80px;
+}
+
+.row:nth-child(3) .key:first-child{
+  width: 95px;
+}
+.row:nth-child(3) .key:last-child{
+  width: 95px;
+}
+.row:nth-child(4) .key:first-child{
+  width: 130px;
+}
+.row:nth-child(4) .key:last-child{
+  width: 130px;
+}
+.row:nth-child(5) .key:nth-child(3){
+  width: 550px;
+}
