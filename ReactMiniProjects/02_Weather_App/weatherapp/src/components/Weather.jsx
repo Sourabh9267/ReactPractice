@@ -25,9 +25,9 @@ const Weather = () => {
     const handleSearch = (e) => {
         e.preventDefault();
         if (location.trim() === '') return;
-
+        const Nlocation=location.toLowerCase();
         // Use the Geocoding API to get latitude and longitude
-        const geocodeUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
+        const geocodeUrl = `https://api.openweathermap.org/data/2.5/weather?q=${Nlocation}&appid=${apiKey}`;
         
         axios.get(geocodeUrl)
             .then(response => {

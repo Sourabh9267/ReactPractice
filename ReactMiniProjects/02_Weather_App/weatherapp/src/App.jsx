@@ -3,7 +3,7 @@ import Weather from './components/Weather'
 
 function App() {
   return (
-    <div className='bg-zinc-200 h-screen w-full e flex items-center justify-center'>
+    <div>
 
     <Weather></Weather>
 
